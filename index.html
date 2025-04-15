@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dla Filona</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #message {
+            display: none;
+            font-size: 3em;
+            color: crimson;
+            animation: fadeIn 2s forwards;
+        }
+        a {
+            font-size: 2em;
+            text-decoration: none;
+            color: #e75480;
+            border: 2px solid #e75480;
+            padding: 10px 20px;
+            border-radius: 20px;
+          <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dla Filona</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #message {
+            display: none;
+            font-size: 3em;
+            color: crimson;
+            animation: fadeIn 2s forwards;
+        }
+        a {
+            font-size: 2em;
+            text-decoration: none;
+            color: #e75480;
+            border: 2px solid #e75480;
+            padding: 10px 20px;
+            border-radius: 20px;
+           .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -15px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: -15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(45deg); }
+            100% { transform: translateY(-800px) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="showLove()">Kliknij tutaj</a>
+    <div id="message">Kocham Cię Filon!</div>
+    <div class="hearts" id="hearts"></div>
+    <audio id="loveSong" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
+
+    <script>
+        function showLove() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("hearts").style.display = "block";
+            document.getElementById("loveSong").play();
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.top = Math.random() * 100 + "vh";
+                heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                document.getElementById("hearts").appendChild(heart);
+            }
+        }
+    </script>
+</body>
+</html>
